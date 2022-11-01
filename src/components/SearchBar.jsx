@@ -41,7 +41,7 @@ export default function SearchBar({ onSearch }) {
     if (event.type === "click" || event.key === "Enter") {
       setLoading(true);
       const apiKey = "698aaf398dc2de525ed31b699aa3a4c7";
-      const url = `http://api.openweathermap.org/data/2.5/weather?q=${textState}&appid=${apiKey}&units=metric`;
+      const url = `http://api.openweathermap.org/data/2.5/weather?q=${textState}&appid=${apiKey}&units=metric/`;
 
       axios
         .get(url)
