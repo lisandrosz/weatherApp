@@ -102,7 +102,7 @@ export default function Card(props) {
         </Temp>
       </TempContainer>
       <Imagen
-        src={`http://openweathermap.org/img/wn/${props.img}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${props.img}@2x.png`}
         alt="card-img"
       />
     </Container>
