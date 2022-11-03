@@ -37,13 +37,13 @@ export default function SearchBar({ onSearch }) {
     setText(evento.target.value);
   };
 
-  const clickButton = (event) => {
+  const clickButton = async (event) => {
     if (event.type === "click" || event.key === "Enter") {
       setLoading(true);
       const apiKey = "698aaf398dc2de525ed31b699aa3a4c7";
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${textState}&appid=${apiKey}&units=metric/`;
 
-      axios
+      await axios
         .get(url)
         .then((response) => onSearch(response.data))
         .catch(() => alert("Ciudad no encontrada"))
